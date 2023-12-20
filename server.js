@@ -3,6 +3,9 @@ const cors = require('cors');
 require('dotenv').config();
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
+const PORT = process.env.PORT || 3001; // Fallback to 3001 if process.env.PORT is not defined
+
+
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -20,7 +23,7 @@ async function run() {
         await client.connect();
         db = client.db("process_sketches");
         console.log("Successfully connected to MongoDB!");
-        app.listen(3001, () => console.log('Server running on port 3001'));
+        app.listen(3001, () => console.log(`Server running on ${PORT}`));
     } catch (error) {
         console.error("Failed to connect to MongoDB", error);
         process.exit(1);
