@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3001; // Fallback to 3001 if process.env.PORT i
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: 'http://https://process-js.netlify.app/' // Replace with your frontend's URL
+    origin: 'https://process-js.netlify.app/' // Replace with your frontend's URL
 }));
 
 const uri = process.env.MONGODB_URI;
