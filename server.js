@@ -65,3 +65,6 @@ app.get('/sketch/:id', async (req, res) => {
     }
 });
 
+app.get('/test', (req, res) => {
+    res.send('Server is running');
+});
