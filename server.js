@@ -18,7 +18,7 @@ const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri)
 let db;
 
-const siteUrl = "https://process-js.netlify.app";
+const siteUrl = "process-js.netlify.app";
 
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
