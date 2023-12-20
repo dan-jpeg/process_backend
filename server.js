@@ -13,7 +13,7 @@ const corsOptions = {
     optionsSuccessStatus: 200
 };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri)
 let db;
